@@ -1,9 +1,23 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { MotiView } from 'moti'
 
-export default function Balance({saldo, gastos}) {
+export default function Balance({ saldo, gastos }) {
   return (
-    <View style={styles.container}>
+    <MotiView style={styles.container}
+      from={{
+        rotate: '-100deg',
+        opacity: 0,
+      }}
+      animate={{
+        rotate: '0deg',
+        opacity: 1,
+      }}
+      transition={{
+        type: 'timing',
+        delay: 300,
+        deration: 900
+      }}>
       <View style={styles.item}>
         <Text style={styles.itemTitle}>Saldo</Text>
         <View style={styles.content}>
@@ -18,7 +32,7 @@ export default function Balance({saldo, gastos}) {
           <Text style={styles.expenses}>{gastos}</Text>
         </View>
       </View>
-    </View>
+    </MotiView>
 
   );
 }
@@ -37,27 +51,27 @@ const styles = StyleSheet.create({
     paddingBottom: 22,
     zIndex: 99,
   },
-  itemTitle:{
+  itemTitle: {
     fontSize: 20,
     color: '#DADADA',
 
   },
-  content:{
+  content: {
     flexDirection: 'row',
-    alignItems:'center',
+    alignItems: 'center',
 
   },
-  currencySymbol:{
+  currencySymbol: {
     color: '#DADADA',
     marginRight: 6,
 
   },
-  balance:{
-    fontSize:22,
+  balance: {
+    fontSize: 22,
     color: '#2ecc71',
   },
-  expenses:{
-    fontSize:22,
+  expenses: {
+    fontSize: 22,
     color: '#e74c3c',
   }
 })

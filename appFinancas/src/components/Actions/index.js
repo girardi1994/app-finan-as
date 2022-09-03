@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     paddingStart: 14,
   },
   actionButton: {
-    marginRight:32,
-    alignItems:'center'
+    marginRight: 32,
+    alignItems: 'center'
   },
   areaButton: {
     backgroundColor: '#ecf0f1',
