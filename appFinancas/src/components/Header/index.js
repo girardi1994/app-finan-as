@@ -17,8 +17,8 @@ export default function Header({ name }) {
           opacity: 0,
         }}
         animate={{
-          translateY: -150,
-          opacity: 0,
+          translateY: 0,
+          opacity: 1,
         }}
         transition={{
           type: 'timing',

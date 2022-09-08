@@ -7,21 +7,21 @@ import Actions from '../../components/Actions';
 const list = [
   {
     id: 1,
-    label: 'Big night',
+    label: 'Supermercado',
     value: '1100,00',
     date: '10/08/2022',
     type: 0
   },
   {
     id: 2,
-    label: 'Poker guarujá',
+    label: 'Pix',
     value: '800,00',
     date: '24/08/2022',
     type: 1
   },
   {
     id: 3,
-    label: 'Pontinho',
+    label: 'Restaurante',
     value: '200,00',
     date: '30/08/2022',
     type: 2
@@ -31,7 +31,7 @@ const list = [
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Header name='Laudemir Linke' />
+      <Header name='Ricardo Girardi' />
 
       <Balance saldo="112.874.80" gastos="-545,00" />
       <Actions />
